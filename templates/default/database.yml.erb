@@ -1,0 +1,8 @@
+production:
+  adapter: <%= @db_type %>
+<%= "  encoding: unicode" if @db_type == 'postgresql' %>
+  database: <%= @db_name %>
+  pool: 5
+  username: <%= @db_user %>
+  password: '<%= node['database']['password'] %>'
+  host: localhost
